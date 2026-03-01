@@ -16,7 +16,7 @@ const ActionBar = ({ actions }: ActionBarProps) => {
       initial={{ y: 30, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ delay: 0.2 }}
-      className="fixed bottom-0 left-0 right-0 bg-wiiu-toolbar px-6 py-3 flex items-center justify-center gap-6 z-50"
+      className="fixed bottom-0 left-0 right-0 bg-wiiu-toolbar/[0.3] backdrop-blur-sm px-6 py-3 flex items-center justify-center gap-6 z-50"
     >
       {actions.map((action, i) => (
         <div key={i} className="flex items-center gap-2">
