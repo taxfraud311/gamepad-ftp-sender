@@ -15,24 +15,16 @@ const WiiUHeader = ({ title, subtitle, onOptionsClick }: WiiUHeaderProps) => {
       className="flex items-center gap-4 px-6 py-4"
     >
       <div className="w-12 h-12 bg-primary rounded-2xl flex items-center justify-center shadow-button overflow-hidden">
-        <svg width="30" height="24" viewBox="0 0 30 24" fill="none">
-          {/* Top-left cloud */}
-          <ellipse cx="9" cy="8" rx="5.5" ry="4" fill="hsl(0 0% 100%)" />
-          <ellipse cx="7" cy="5.5" rx="3" ry="2.5" fill="hsl(0 0% 100%)" />
-          <ellipse cx="11" cy="5" rx="3.5" ry="3" fill="hsl(0 0% 100%)" />
-          {/* Left face - looking right/down */}
-          <circle cx="9" cy="7" r="0.55" fill="hsl(210 30% 40%)" />
-          <circle cx="11.2" cy="7.5" r="0.55" fill="hsl(210 30% 40%)" />
-          <path d="M9.2 9.2 Q10.2 10.2 11.2 9.2" stroke="hsl(210 30% 40%)" strokeWidth="0.5" strokeLinecap="round" fill="none" />
-
-          {/* Bottom-right cloud */}
-          <ellipse cx="21" cy="16" rx="5.5" ry="4" fill="hsl(0 0% 100%)" />
-          <ellipse cx="23" cy="13.5" rx="3" ry="2.5" fill="hsl(0 0% 100%)" />
-          <ellipse cx="19" cy="13" rx="3.5" ry="3" fill="hsl(0 0% 100%)" />
-          {/* Right face - looking left/up */}
-          <circle cx="19" cy="15" r="0.55" fill="hsl(210 30% 40%)" />
-          <circle cx="21.2" cy="15.5" r="0.55" fill="hsl(210 30% 40%)" />
-          <path d="M19 17.2 Q20.1 18.2 21.2 17.2" stroke="hsl(210 30% 40%)" strokeWidth="0.5" strokeLinecap="round" fill="none" />
+        <svg width="30" height="22" viewBox="0 0 30 22" fill="none">
+          {/* Cloud body */}
+          <ellipse cx="15" cy="15" rx="12" ry="5.5" fill="hsl(0 0% 100%)" />
+          <ellipse cx="9" cy="11" rx="5.5" ry="5" fill="hsl(0 0% 100%)" />
+          <ellipse cx="15" cy="7" rx="6.5" ry="6" fill="hsl(0 0% 100%)" />
+          <ellipse cx="21" cy="10.5" rx="5.5" ry="5.5" fill="hsl(0 0% 100%)" />
+          {/* Face */}
+          <circle cx="11.5" cy="12" r="0.9" fill="hsl(210 25% 45%)" opacity="0.5" />
+          <circle cx="18.5" cy="12" r="0.9" fill="hsl(210 25% 45%)" opacity="0.5" />
+          <path d="M11.5 15 Q15 18 18.5 15" stroke="hsl(210 25% 45%)" strokeWidth="0.8" strokeLinecap="round" fill="none" opacity="0.5" />
         </svg>
       </div>
       <div className="flex-1">
