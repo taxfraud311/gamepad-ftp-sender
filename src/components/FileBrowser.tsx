@@ -43,7 +43,7 @@ const FileBrowser = ({
       initial={{ y: 15, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ delay: 0.1 }}
-      className="bg-card rounded-2xl shadow-card flex flex-col overflow-hidden h-full"
+      className="bg-card/85 backdrop-blur-md rounded-2xl shadow-card flex flex-col overflow-hidden h-full"
     >
       {/* Header */}
       <div className="flex items-center gap-3 px-4 py-3 border-b border-border">
