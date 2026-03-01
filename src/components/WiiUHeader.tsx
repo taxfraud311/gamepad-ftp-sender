@@ -15,23 +15,24 @@ const WiiUHeader = ({ title, subtitle, onOptionsClick }: WiiUHeaderProps) => {
       className="flex items-center gap-4 px-6 py-4"
     >
       <div className="w-12 h-12 bg-primary rounded-2xl flex items-center justify-center shadow-button overflow-hidden">
-        <svg width="28" height="20" viewBox="0 0 28 20" fill="none">
-          {/* Left cloud */}
-          <ellipse cx="8" cy="13" rx="6" ry="4.5" fill="hsl(0 0% 100%)" />
-          <ellipse cx="6" cy="10.5" rx="3.5" ry="3" fill="hsl(0 0% 100%)" />
-          <ellipse cx="9.5" cy="9" rx="4" ry="3.5" fill="hsl(0 0% 100%)" />
-          {/* Left face */}
-          <circle cx="6.5" cy="12" r="0.6" fill="hsl(210 30% 40%)" />
-          <circle cx="9" cy="12" r="0.6" fill="hsl(210 30% 40%)" />
-          <path d="M6.5 13.8 Q7.75 15 9 13.8" stroke="hsl(210 30% 40%)" strokeWidth="0.5" strokeLinecap="round" fill="none" />
-          {/* Right cloud */}
-          <ellipse cx="20" cy="13" rx="6" ry="4.5" fill="hsl(0 0% 100%)" />
-          <ellipse cx="22" cy="10.5" rx="3.5" ry="3" fill="hsl(0 0% 100%)" />
-          <ellipse cx="18.5" cy="9" rx="4" ry="3.5" fill="hsl(0 0% 100%)" />
-          {/* Right face */}
-          <circle cx="19" cy="12" r="0.6" fill="hsl(210 30% 40%)" />
-          <circle cx="21.5" cy="12" r="0.6" fill="hsl(210 30% 40%)" />
-          <path d="M19 13.8 Q20.25 15 21.5 13.8" stroke="hsl(210 30% 40%)" strokeWidth="0.5" strokeLinecap="round" fill="none" />
+        <svg width="30" height="24" viewBox="0 0 30 24" fill="none">
+          {/* Top-left cloud */}
+          <ellipse cx="9" cy="8" rx="5.5" ry="4" fill="hsl(0 0% 100%)" />
+          <ellipse cx="7" cy="5.5" rx="3" ry="2.5" fill="hsl(0 0% 100%)" />
+          <ellipse cx="11" cy="5" rx="3.5" ry="3" fill="hsl(0 0% 100%)" />
+          {/* Left face - looking right/down */}
+          <circle cx="9" cy="7" r="0.55" fill="hsl(210 30% 40%)" />
+          <circle cx="11.2" cy="7.5" r="0.55" fill="hsl(210 30% 40%)" />
+          <path d="M9.2 9.2 Q10.2 10.2 11.2 9.2" stroke="hsl(210 30% 40%)" strokeWidth="0.5" strokeLinecap="round" fill="none" />
+
+          {/* Bottom-right cloud */}
+          <ellipse cx="21" cy="16" rx="5.5" ry="4" fill="hsl(0 0% 100%)" />
+          <ellipse cx="23" cy="13.5" rx="3" ry="2.5" fill="hsl(0 0% 100%)" />
+          <ellipse cx="19" cy="13" rx="3.5" ry="3" fill="hsl(0 0% 100%)" />
+          {/* Right face - looking left/up */}
+          <circle cx="19" cy="15" r="0.55" fill="hsl(210 30% 40%)" />
+          <circle cx="21.2" cy="15.5" r="0.55" fill="hsl(210 30% 40%)" />
+          <path d="M19 17.2 Q20.1 18.2 21.2 17.2" stroke="hsl(210 30% 40%)" strokeWidth="0.5" strokeLinecap="round" fill="none" />
         </svg>
       </div>
       <div className="flex-1">
