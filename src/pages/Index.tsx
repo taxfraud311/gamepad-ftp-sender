@@ -6,6 +6,7 @@ import FileBrowser, { MOCK_DEVICE_FILES, MOCK_SERVER_FILES, type FileEntry } fro
 import ActionBar from "@/components/ActionBar";
 import TransferStatusBar, { type TransferStatus, type TransferDirection } from "@/components/TransferStatusBar";
 import { motion } from "framer-motion";
+import CloudBackground from "@/components/CloudBackground";
 
 type FocusZone = "connection" | "device" | "server";
 
@@ -181,13 +182,15 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-background pb-16">
-      <WiiUHeader
-        title="FTP Transfer"
-        subtitle={connected ? `Connected to ${host}` : "Connect to start transferring"}
-      />
+    <div className="min-h-screen pb-16 relative">
+      <CloudBackground />
+      <div className="relative z-10">
+        <WiiUHeader
+          title="FTP Transfer"
+          subtitle={connected ? `Connected to ${host}` : "Connect to start transferring"}
+        />
 
-      <div className="px-4 space-y-4">
+        <div className="px-4 space-y-4">
         {!connected ? (
           <ConnectionPanel
             host={host}
@@ -241,6 +244,7 @@ const Index = () => {
             Connect
           </motion.button>
         )}
+        </div>
       </div>
 
       <TransferStatusBar
