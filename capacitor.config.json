@@ -1,0 +1,9 @@
+{
+  "appId": "app.lovable.188ee23e997a4fe8b5f94c280350a368",
+  "appName": "Airborne",
+  "webDir": "dist",
+  "server": {
+    "url": "https://188ee23e-997a-4fe8-b5f9-4c280350a368.lovableproject.com?forceHideBadge=true",
+    "cleartext": true
+  }
+}
