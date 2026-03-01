@@ -1,10 +1,12 @@
-import { useState, useCallback, useRef, useEffect } from "react";
+import { useState, useCallback } from "react";
 import { useControllerNav } from "@/hooks/useControllerNav";
+import { useBgMusic } from "@/hooks/useBgMusic";
 import WiiUHeader from "@/components/WiiUHeader";
 import ConnectionPanel from "@/components/ConnectionPanel";
 import FileBrowser, { MOCK_DEVICE_FILES, MOCK_SERVER_FILES, type FileEntry } from "@/components/FileBrowser";
 import ActionBar from "@/components/ActionBar";
 import TransferStatusBar, { type TransferStatus, type TransferDirection } from "@/components/TransferStatusBar";
+import OptionsMenu from "@/components/OptionsMenu";
 import { motion } from "framer-motion";
 import CloudBackground from "@/components/CloudBackground";
 
@@ -26,6 +28,8 @@ const Index = () => {
   const [deviceSelected, setDeviceSelected] = useState<Set<number>>(new Set());
   const [serverSelected, setServerSelected] = useState<Set<number>>(new Set());
   const [storageType, setStorageType] = useState<"internal" | "sd">("internal");
+  const [optionsOpen, setOptionsOpen] = useState(false);
+  const music = useBgMusic();
 
   // File state
   const [deviceFiles] = useState<FileEntry[]>(MOCK_DEVICE_FILES);
@@ -157,6 +161,10 @@ const Index = () => {
       if (btn === "lb" && connected) {
         setFocusZone((z) => (z === "server" ? "device" : "server"));
       }
+
+      if (btn === "start") {
+        setOptionsOpen((o) => !o);
+      }
     },
     [
       connected, focusZone, deviceFocus, serverFocus,
@@ -170,6 +178,7 @@ const Index = () => {
     if (!connected) {
       return [
         { label: "A", btnClass: "btn-a", text: "Connect" },
+        { label: "+", btnClass: "btn-x", text: "Options" },
       ];
     }
     return [
@@ -177,7 +186,7 @@ const Index = () => {
       { label: "B", btnClass: "btn-b", text: "Back" },
       { label: "X", btnClass: "btn-x", text: "Transfer" },
       { label: "Y", btnClass: "btn-y", text: "Storage" },
-      { label: "LB/RB", btnClass: "btn-x", text: "Switch Panel" },
+      { label: "+", btnClass: "btn-x", text: "Options" },
     ];
   };
 
@@ -188,6 +197,7 @@ const Index = () => {
         <WiiUHeader
           title="FTP Transfer"
           subtitle={connected ? `Connected to ${host}` : "Connect to start transferring"}
+          onOptionsClick={() => setOptionsOpen(true)}
         />
 
         <div className="px-4 space-y-4">
@@ -255,6 +265,7 @@ const Index = () => {
       />
 
       <ActionBar actions={getActions()} />
+      <OptionsMenu open={optionsOpen} onClose={() => setOptionsOpen(false)} music={music} />
     </div>
   );
 };
