@@ -20,7 +20,7 @@ const TransferStatusBar = ({ status, direction, fileName, progress }: TransferSt
         initial={{ y: 20, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         exit={{ y: 20, opacity: 0 }}
-        className="fixed bottom-14 left-4 right-4 bg-card/50 backdrop-blur-sm rounded-2xl shadow-card p-4 z-40"
+        className="fixed bottom-14 left-4 right-4 bg-card/[0.6] backdrop-blur-sm rounded-2xl shadow-card p-4 z-40"
       >
         <div className="flex items-center gap-3">
           {status === "transferring" && (

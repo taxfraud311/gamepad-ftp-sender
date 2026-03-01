@@ -27,7 +27,7 @@ const ConnectionPanel = ({
     <motion.div
       initial={{ scale: 0.95, opacity: 0 }}
       animate={{ scale: 1, opacity: 1 }}
-      className="bg-card/45 backdrop-blur-sm rounded-2xl shadow-card p-5 space-y-3"
+      className="bg-card/[0.6] backdrop-blur-sm rounded-2xl shadow-card p-5 space-y-3"
     >
       <div className="flex items-center gap-3 mb-4">
         {connected ? (
