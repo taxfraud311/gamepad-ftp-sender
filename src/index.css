@@ -86,10 +86,7 @@
 
 /* Wii U style button labels */
 .btn-label {
-  @apply inline-flex items-center justify-center w-7 h-7 rounded-full text-xs font-extrabold;
+  @apply inline-flex items-center justify-center w-7 h-7 rounded-full text-xs font-extrabold bg-card text-foreground;
 }
 
-.btn-a { @apply bg-wiiu-green text-wiiu-green-foreground; }
-.btn-b { @apply bg-destructive text-destructive-foreground; }
-.btn-x { @apply bg-wiiu-blue text-primary-foreground; }
-.btn-y { @apply bg-wiiu-orange text-wiiu-orange-foreground; }
+.btn-a, .btn-b, .btn-x, .btn-y { }
