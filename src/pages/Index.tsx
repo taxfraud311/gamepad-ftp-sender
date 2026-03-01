@@ -195,8 +195,8 @@ const Index = () => {
       <CloudBackground />
       <div className="relative z-10">
         <WiiUHeader
-          title="FTP Transfer"
-          subtitle={connected ? `Connected to ${host}` : "Connect to start transferring"}
+          title="Airborne"
+          subtitle={connected ? `Connected to ${host}` : undefined}
           onOptionsClick={() => setOptionsOpen(true)}
         />
 
